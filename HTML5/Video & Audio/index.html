@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio & Video</title>
+</head>
+<body>
+	<h1>Video : </h1>
+	<video src="1. Introduction to Algorithms.mp4" id="myvideo" controls loop>
+		Your Browser does not support video
+	</video>
+	<h1>Audio : </h1>
+	<audio src="2gh10(www.songs.pk).mp3" id="myaudio" loop>Message display if browser do not support audio</audio>
+	<div>
+		<button onclick="document.getElementById('myaudio').play()">Play</button>
+		<button onclick="document.getElementById('myaudio').pause()">Pause</button>
+		<button onclick="document.getElementById('myaudio').volume+=0.1">+ Volume</button>
+		<button onclick="document.getElementById('myaudio').volume-=0.1">- Volume</button>
+	</div>
+	<script>
+		var v=document.getElementById('myvideo');
+		v.play();
+	</script>
+	<button onclick="v.play()">Play V</button>
+</body>
+</html>

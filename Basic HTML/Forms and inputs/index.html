@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forms & Input</title>
+	</head>
+	<body>
+		<form>
+			<label>Name</label><br>
+			<input type="text" name="name1">
+			<br><br>
+			<label>Email</label><br>
+			<input type="email" name="email1" width="600">
+			<br><br>
+			<label>Password</label><br>
+			<input type="Password" name="password1">
+			<br><br>
+			<label>Location</label><br>
+			<select name="location1">
+				<option value="NY">New York</option>
+				<option value="MD">Madagascar</option>
+				<option value="CA">California</option>
+			</select>
+			<br><br>
+			<label>Gender</label><br>
+			<input type="radio" name="gender1" value="Male">Male
+			<input type="radio" name="gender1" value="Female">Female
+			<input type="radio" name="gender1" value="Transgender">Transgender
+			<br><br>
+			<label>Interests</label><br>
+			<input type="checkbox" name="interest1" value="Volleyball">Volleyball
+			<input type="checkbox" name="interest1" value="Football">Football
+			<input type="checkbox" name="interest1" value="Dancing">Dancing
+			<input type="checkbox" name="interest1" value="Singing">Singing
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+		<br><br><br>
+		<h1>Form 2 : with some validation and defaults : </h1>
+		<form action="POST" accept="index.php">
+			<fieldset>
+				<legend>Acoount</legend>
+				<label>Name</label><br>
+				<input type="text" name="name2" required>
+				<br><br>
+				<label>Email</label><br>
+				<input type="email" name="email2" required>
+				<br><br>
+				<label>Password</label><br>
+				<input type="Password" name="password2" required>
+				<br><br>
+			</fieldset>
+			<fieldset>
+				<legend>User Info</legend>
+				<label>Location</label><br>
+				<select name="location1">
+					<option value="NY">New York</option>
+					<option value="MD" selected>Madagascar</option>
+					<option value="CA">California</option>
+				</select>
+				<br><br>
+				<label>Gender</label><br>
+				<input type="radio" name="gender1" value="Male">Male
+				<input type="radio" name="gender1" value="Female" checked="">Female
+				<input type="radio" name="gender1" value="Transgender">Transgender
+				<br><br>
+				<label>Interests</label><br>
+				<input type="checkbox" name="interest1" value="Volleyball" checked="">Volleyball
+				<input type="checkbox" name="interest1" value="Football">Football
+				<input type="checkbox" name="interest1" value="Dancing" checked="">Dancing
+				<input type="checkbox" name="interest1" value="Singing">Singing
+				<br><br>
+			</fieldset>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

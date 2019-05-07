@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyNote</title>
+	<style>
+		body{
+			font-family: Monotiva Corsiva;
+			line-height: 1.6em;
+			background: #f4f4f4;
+		}
+		header,footer{
+			text-align: center;
+		}
+		#container{
+			width: 400px;
+			margin: 50px auto;
+			background: #ffffac;
+			overflow: hidden;
+			padding: 30px;
+		}
+		.clear{
+			text-decoration: none;
+			background: #333;
+			color: #fff;
+			padding: 10px;
+		}
+	</style>
+	<script>
+		function getNote(){
+			if (localStorage.getItem('note')) {
+				var note='<li>'+localStorage.getItem('note')+'</li>';
+			}
+			else{
+				var note='Go ahead and edit this note to save in local storage';
+			}
+			document.getElementById('note').innerHTML=note;
+		}
+
+		function saveNote(id){
+			var note=document.getElementById('note').innerHTML;
+			localStorage.setItem('note',note);
+		}
+
+		function clearNote(){
+			localStorage.removeItem('note');
+			console.log('AAAAAAAA');
+			getNote();
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>MyNote</h1>
+	</header>
+	<section id="container">
+		<ul>
+			<div id="note" contenteditable="true" onkeyup="saveNote(this.id)">
+				
+			</div>
+		</ul>
+	</section>
+	<footer>
+		<div>
+			<button onclick="clearNote()" class="clear">Clear Note</button>
+		</div>
+		<p>MyNote &copy; 2018</p>
+	</footer>
+	<script>
+		getNote();
+	</script>
+</body>
+</html>
