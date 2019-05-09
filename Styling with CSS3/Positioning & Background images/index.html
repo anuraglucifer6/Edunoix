@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Positioning & Background</title>
+	<style>
+		.wrapper{
+			border: #000 1px solid;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 50px;
+			top: 100px;
+			background-image: url('FEBLONG.png');
+			background-repeat: no-repeat;
+			background-color: #f00;
+		}
+		.inside{
+			border: #ff0000 1px solid;
+			width:200px;
+			height: 100px;
+			position: relative;
+			top: 20px;
+			left: 50px;
+
+		}
+		#inside2{
+			border: 3px red solid;
+			width:100px;
+			height: 50px;
+			position: relative;
+			top: 50px;
+			left: 80px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="inside">
+			<div id="inside2">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
